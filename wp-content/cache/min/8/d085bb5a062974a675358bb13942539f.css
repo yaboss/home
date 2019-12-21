@@ -26025,7 +26025,7 @@ nav.woocommerce-breadcrumb a {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 0;
 }
 
 .tb-site-header.tb-sticky-header {
@@ -26439,20 +26439,13 @@ nav.woocommerce-breadcrumb a {
 }
 
 .tb-m-menu-btn {
-    
-position: relative;
-float: right;
-padding: 9px 10px;
-margin-top: 8px;
-margin-right: 15px;
-margin-bottom: 8px;
-background-color: transparent;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 27px;
+    cursor: pointer;
+    display: none
 }
-
-
 
 .tb-m-menu-btn span {
     margin: 0 auto;
@@ -27525,7 +27518,7 @@ border-radius: 4px;
 
     .tb-site-header.tb-style2 {
         width: 100%;
-        height: 70px
+        height: 0px
     }
 
     .tb-sidebar-parent .tb-solid-header-height {
