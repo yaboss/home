@@ -26025,11 +26025,13 @@ nav.woocommerce-breadcrumb a {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1000;
+    background: rgba(252, 252, 252, 1) !important;
 }
 
 .tb-site-header.tb-sticky-header {
-    position: sticky
+    position: sticky;
+    margin-top:0px;
 }
 
 .tb-header-border1 {
