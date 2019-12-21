@@ -9,6 +9,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home - Creative</title>
+    <link rel="shortcut icon" href="english/favicon.png" />
+
     <link rel="stylesheet" href="wp-content/cache/min/8/d085bb5a062974a675358bb13942539f.css" data-minify="1" />
 
     <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -45,6 +47,27 @@
             padding: 0 !important
         }
     </style>
+    <style>
+    
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.toggle, .dropdown-menu {
+  width: 100%;
+}
+
+.is-active .dropdown-menu {
+  display: block;
+}
+
+    
+    
+    </style>
     <link rel='stylesheet' id='webify-fonts-css'
         href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0'
         type='text/css' media='all' />
@@ -71,11 +94,11 @@
         href="wp-json/oembed/1.0/embedfdc6.json?url=http%3A%2F%2Fthemebubble.com%2Fdemo%2Fwebify%2Fcreative%2F" />
     <link rel="alternate" type="text/xml+oembed"
         href="wp-json/oembed/1.0/embed36cf?url=http%3A%2F%2Fthemebubble.com%2Fdemo%2Fwebify%2Fcreative%2F&amp;format=xml" />
-    <link rel="icon" href="wp-content/uploads/sites/8/2019/05/cropped-Favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="wp-content/uploads/sites/8/2019/05/cropped-Favicon-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="wp-content/uploads/sites/8/2019/05/cropped-Favicon-180x180.png" />
+    <link rel="icon" href="english/favicon.png" sizes="32x32" />
+    <link rel="icon" href="english/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="english/favicon.png" />
     <meta name="msapplication-TileImage"
-        content="http://themebubble.com/demo/webify/creative/wp-content/uploads/sites/8/2019/05/cropped-Favicon-270x270.png" />
+        content="english/favicon.png" />
     <style type="text/css">
         .tb-page-header {
             background-image: url(wp-content/uploads/sites/8/2019/04/peter-secan-422909-unsplash-2.jpg)
@@ -153,10 +176,12 @@
                     </div>
                     <div class="tb-main-header-right">
                         <nav class="tb-main-nav tb-primary-nav">
+                                <div class="dropdown">
+
                             <ul id="nav" class="tb-primary-nav-list">
                                 <li id="menu-item-528"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-528">
-                                    <a href="#Home">Home</a></li>
+                                    <a  href="#Home">Home</a></li>
                                 <li id="menu-item-587"
                                     class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-574 current_page_item menu-item-587">
                                     <a href="#Revolusi">About</a></li>
@@ -1237,11 +1262,20 @@
     </div>
     <script>
 
-    $("#nav").on("click", "li", function () {
-       $("#menu-icon").click();
-       //or $("#nav").slideToggle();
+const $menu = $('.dropdown');
+
+$(document).mouseup(e => {
+   if (!$menu.is(e.target) // if the target of the click isn't the container...
+   && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+   {
+     $menu.removeClass('is-active');
+  }
  });
-    
+
+$('.toggle').on('click', () => {
+  $menu.toggleClass('is-active');
+});
+
     
     </script>
     <script
